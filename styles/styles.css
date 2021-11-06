@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Underdog&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
+    min-height: 100vh;
+    background-color: #42378f;
+    background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+}
+
+i,svg{
+    pointer-events: none;
+}
+
+header{
+    min-height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1{
+    margin-bottom: 1.25rem;
+    letter-spacing: 4px;
+}
+header h1 span{
+    font-family: 'Underdog', cursive;
+}
+
+header a{
+    color:white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header input[type="text"]{
+    font-size:1.2rem;
+    padding:0.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: rgba(255,255,255,0.4);
+    color:black;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 0 2px 5px white;
+}
+::placeholder{
+    color:black;
+    font-weight: lighter;
+}
+
+header button{
+    border: none;
+    font-size:1.2rem;
+    padding:0.25rem 0.5rem;
+    background-color: rgba(255,255,255,0.4);
+    border-radius:0.25rem;
+    color:white;
+    margin-left:1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 3px white;
+}
+
+main{
+    min-height:55vh;
+}
+
+footer{
+    color:white;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size:1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+footer button{
+    padding:0.45rem;
+    border: none;
+    font-size:1.5rem;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    background-color: #622264;
+    color:white;
+    box-shadow: 0 0 10px rgb(32, 153, 153);
+}
+
+footer h4{
+    position: relative;
+    top:2rem;
+}
+
+footer button i{
+    margin-left: 1rem;
+    background-color: transparent;
+}
+
+.gallery{
+    display: grid;
+    width: 80%;
+    margin:auto;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    row-gap: 10px;
+    column-gap:10px;
+}
+
+.gallery-img{
+    margin-top:2rem;
+}
+.gallery-img img{
+    padding:0.5rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    animation : image 0.5s linear;
+}
+
+.gallery-img div{
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    padding: 0rem 1.5rem;
+}
+.gallery-img div a{
+    text-decoration: none;
+    color:white;
+    font-size:1.25rem;
+}
+
+@keyframes image {
+    from{
+        transform: scale(0)
+    }
+    to{
+        transform: scale(1)
+    }
+}
+
+
+@media only screen and (max-width:500px){
+    .gallery{
+        width: 100%;
+        margin: 1.25rem auto;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        row-gap: 10px;
+    }
+
+    .gallery-img div a{
+        font-size:1rem;
+    }
+
+    footer{
+        min-height: 15vh;
+        font-size:1rem;
+        overflow: visible;
+    }
+    
+    footer button{
+        padding:0.25rem;
+        border: none;
+
+        font-size:1rem;
+    }
+    footer h4{
+        padding:0;
+    }
+    header input[type="text"]{
+        font-size:1rem;
+        padding:0.25rem;
+        width:80%;
+
+    }
+    form{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
